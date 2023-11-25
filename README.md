@@ -11,8 +11,12 @@ sudo dnf -y install nomad
 
 ## Start dev instance
 <pre>
-nomad agent -dev
+nomad agent -dev -config=/etc/nomad.d
 </pre>
 Access ui at http://localhost:4646/ui/jobs
 
 Install docker driver: https://developer.hashicorp.com/nomad/docs/drivers/docker#client-requirements
+
+## Start systemd service
+Ensure that the following services are running
+* podman
